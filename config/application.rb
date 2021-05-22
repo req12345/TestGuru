@@ -1,4 +1,5 @@
 require_relative "boot"
+require_relative "initializers/version"
 
 require "rails/all"
 
