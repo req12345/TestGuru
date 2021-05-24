@@ -6,7 +6,6 @@ class CreateTests < ActiveRecord::Migration[6.1]
       t.references :category, foreign_key: { to_table: :categories }, index: true
 
       t.timestamps
-
     end
   end
 end
