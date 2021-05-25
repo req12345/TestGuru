@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_05_23_203337) do
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "skill"
+    t.integer "skill", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
