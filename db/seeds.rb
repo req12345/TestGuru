@@ -18,11 +18,11 @@ category = Category.create([
   {title: 'Mobile'}])
 
 test = Test.create([
-  {title: 'Ruby'},
-  {title: 'C++', level: 2},
-  {title: 'Python', level: 3},
-  {title: 'JavaScript', level: 2},
-  {title: 'CSS', level: 0}])
+  {title: 'Ruby', level: 1, category_id: 2},
+  {title: 'C++', level: 2, category_id: 2},
+  {title: 'Python', level: 3, category_id: 3},
+  {title: 'JavaScript', level: 2, category_id: 1},
+  {title: 'CSS', level: 0, category_id: 1}])
 
 question = Question.create([
   {body: "What month and year the 'Ruby' was invented?"},
@@ -31,9 +31,17 @@ question = Question.create([
   {body: "What month and year the 'JavaScript' was invented?"},
   {body: "What month and year the 'HTML' was invented?"}])
 
-answer = Answers.create([
+answer = Answer.create([
   {body: 'february 1993'},
   {body: 'october 1985'},
-  {body: 'february 1991'}
-  {body: 'december 1995'}
+  {body: 'february 1991'},
+  {body: 'december 1995'},
   {body: 'december 1996'}])
+
+user_test = UsersTest.create([
+  {user_id: 1, test_id: 1},
+  {user_id: 1, test_id: 2},
+  {user_id: 1, test_id: 4},
+  {user_id: 2, test_id: 5},
+  {user_id: 2, test_id: 4},
+  {user_id: 2, test_id: 3}])
