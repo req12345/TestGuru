@@ -18,30 +18,31 @@ category = Category.create([
   {title: 'Mobile'}])
 
 test = Test.create([
-  {title: 'Ruby', level: 1, category_id: 2},
-  {title: 'C++', level: 2, category_id: 2},
-  {title: 'Python', level: 3, category_id: 3},
-  {title: 'JavaScript', level: 2, category_id: 1},
-  {title: 'CSS', level: 0, category_id: 1}])
+  {title: 'Ruby', level: 1, category_id: category[1].id},
+  {title: 'C++', level: 2, category_id: category[1].id},
+  {title: 'Python', level: 3, category_id: category[2].id},
+  {title: 'JavaScript', level: 2, category_id: category[0].id},
+  {title: 'CSS', level: 0, category_id: category[0].id}])
 
 question = Question.create([
-  {body: "What month and year the 'Ruby' was invented?"},
-  {body: "What month and year the 'C++' was invented?"},
-  {body: "What month and year the 'Python' was invented?"},
-  {body: "What month and year the 'JavaScript' was invented?"},
-  {body: "What month and year the 'HTML' was invented?"}])
+  {body: "What month and year the 'Ruby' was invented?", test_id: test[0].id},
+  {body: "What month and year the 'C++' was invented?", test_id: test[1].id},
+  {body: "What month and year the 'Python' was invented?", test_id: test[2].id},
+  {body: "What month and year the 'JavaScript' was invented?", test_id: test[3].id},
+  {body: "What month and year the 'HTML' was invented?", test_id: test[4].id}])
 
 answer = Answer.create([
-  {body: 'february 1993'},
-  {body: 'october 1985'},
-  {body: 'february 1991'},
-  {body: 'december 1995'},
-  {body: 'december 1996'}])
+  {body: 'february 1993', question_id: question[0]},
+  {body: 'october 1985', question_id: question[1]},
+  {body: 'february 1991', question_id: question[2]},
+  {body: 'december 1995', question_id: question[3]},
+  {body: 'december 1996', question_id: question[4]}])
 
 user_test = UsersTest.create([
-  {user_id: 1, test_id: 1},
-  {user_id: 1, test_id: 2},
-  {user_id: 1, test_id: 4},
-  {user_id: 2, test_id: 5},
-  {user_id: 2, test_id: 4},
-  {user_id: 2, test_id: 3}])
+  {user_id: user[0].id, test_id: test[0].id},
+  {user_id: user[0].id, test_id: test[1].id},
+  {user_id: user[0].id, test_id: test[3].id},
+  {user_id: user[1].id, test_id: test[4].id},
+  {user_id: user[1].id, test_id: test[3].id},
+  {user_id: user[1].id, test_id: test[2].id}
+  ])
