@@ -18,11 +18,11 @@ category = Category.create([
   {title: 'Mobile'}])
 
 test = Test.create([
-  {title: 'Ruby', level: 1, category_id: category[1].id},
-  {title: 'C++', level: 2, category_id: category[1].id},
-  {title: 'Python', level: 3, category_id: category[2].id},
-  {title: 'JavaScript', level: 2, category_id: category[0].id},
-  {title: 'CSS', level: 0, category_id: category[0].id}])
+  {title: 'Ruby', level: 1, category_id: category[1].id, author_id: user[1].id},
+  {title: 'C++', level: 2, category_id: category[1].id, author_id: user[1].id},
+  {title: 'Python', level: 3, category_id: category[2].id, author_id: user[0].id},
+  {title: 'JavaScript', level: 2, category_id: category[0].id, author_id: user[0].id},
+  {title: 'CSS', level: 0, category_id: category[0].id, author_id: user[0].id}])
 
 question = Question.create([
   {body: "What month and year the 'Ruby' was invented?", test_id: test[0].id},
@@ -32,11 +32,11 @@ question = Question.create([
   {body: "What month and year the 'HTML' was invented?", test_id: test[4].id}])
 
 answer = Answer.create([
-  {body: 'february 1993', question_id: question[0]},
-  {body: 'october 1985', question_id: question[1]},
-  {body: 'february 1991', question_id: question[2]},
-  {body: 'december 1995', question_id: question[3]},
-  {body: 'december 1996', question_id: question[4]}])
+  {body: 'february 1993', question_id: question[0].id},
+  {body: 'october 1985', question_id: question[1].id},
+  {body: 'february 1991', question_id: question[2].id},
+  {body: 'december 1995', question_id: question[3].id},
+  {body: 'december 1996', question_id: question[4].id}])
 
 user_test = UsersTest.create([
   {user_id: user[0].id, test_id: test[0].id},
