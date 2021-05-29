@@ -9,6 +9,8 @@ class Test < ApplicationRecord
   scope :middle, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
 
+  validates :title, :category, :author_id presence: true
+
   def self.by_category(category)
       joins('INNER JOIN categories ON tests.category_id = categories.id')
       .where('categories.title = ?', category).order(id: :desc).pluck('tests.title')
