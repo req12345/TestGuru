@@ -9,7 +9,7 @@ class Test < ApplicationRecord
   scope :middle, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
 
-  validates :title, :category, :author_id presence: true
+  validates :title, presence: true, uniqueness: { scope: :level }
 
   def self.by_category(category)
       joins('INNER JOIN categories ON tests.category_id = categories.id')
