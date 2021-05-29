@@ -33,6 +33,8 @@ question = Question.create([
 
 answer = Answer.create([
   {body: 'february 1993', question_id: question[0].id, correct: true},
+  {body: 'march 1993', question_id: question[0].id},
+  {body: 'august 2021', question_id: question[0].id},
   {body: 'october 1985', question_id: question[1].id},
   {body: 'february 1991', question_id: question[2].id, correct: true},
   {body: 'december 1995', question_id: question[3].id},
