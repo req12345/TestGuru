@@ -20,8 +20,8 @@ category = Category.create([
 test = Test.create([
   {title: 'Ruby', level: 1, category_id: category[1].id, author_id: user[1].id},
   {title: 'C++', level: 2, category_id: category[1].id, author_id: user[1].id},
-  {title: 'Python', level: 3, category_id: category[2].id, author_id: user[0].id},
-  {title: 'JavaScript', level: 2, category_id: category[0].id, author_id: user[0].id},
+  {title: 'Python', level: 4, category_id: category[2].id, author_id: user[0].id},
+  {title: 'JavaScript', level: 6, category_id: category[0].id, author_id: user[0].id},
   {title: 'CSS', level: 0, category_id: category[0].id, author_id: user[0].id}])
 
 question = Question.create([
