@@ -10,7 +10,8 @@ class Test < ApplicationRecord
   scope :hard, -> { where(level: 5..Float::INFINITY) }
 
   validates :title, presence: true, uniqueness: { scope: :level }
-
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  
   def self.by_category(category)
       joins('INNER JOIN categories ON tests.category_id = categories.id')
       .where('categories.title = ?', category).order(id: :desc).pluck('tests.title')
