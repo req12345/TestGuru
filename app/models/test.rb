@@ -3,6 +3,7 @@ class Test < ApplicationRecord
   has_many :questions
   has_many :users_tests
   has_many :users, through: :users_tests
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   def self.by_category(category)
       joins('INNER JOIN categories ON tests.category_id = categories.id')
