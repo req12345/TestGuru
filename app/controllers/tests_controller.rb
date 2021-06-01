@@ -1,5 +1,9 @@
 class TestsController < ApplicationController
   def index
-    render inline: '<p>Alls tests are: <%= %Test.all %></p>'
+    tests = Test.all
+    tests_html = ""
+    tests_html << "<h1>All tests:</h1>"
+    tests.each { |t| tests_html << "<p>#{t.title}</p>" }
+    render inline: tests_html
   end
 end
