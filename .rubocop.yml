@@ -1,0 +1,14 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'app/controllers/application_controller.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
