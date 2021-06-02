@@ -1,0 +1,21 @@
+<h1>All tests</h1>
+
+<table>
+  <tr>
+    <th>№</th>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Category</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+    <tr>
+      <% @number ||= 1 %>
+      <td><%= @number  %></td>
+      <td><%= test.title %></td>
+      <td><%= test.level %></td>
+      <td><%= test.category.title %></td>
+      <% @number += 1 %>
+    </tr>
+    <% end %>
+</table>
