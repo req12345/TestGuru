@@ -2,5 +2,12 @@
   <% @number ||= 1 %>
   <td><%= @number  %></td>
   <td><%= question.body %></td>
+  <td><%= link_to 'Edit', edit_question_path(question) %></td>
+  <td><%= link_to 'Show', question_path(question) %></td>
+  <td><%= link_to 'Delete',
+                   test_questions_path(question),
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' }%>
+  </td>
   <% @number += 1 %>
 </tr>

@@ -1,2 +1,4 @@
-<h1> Test: <%= @test.title %></h1>
+<h1> Test: <%= @question.test.title %></h1>
 <p>Question: <%= @question.body %></p>
+<%= link_to 'Edit', edit_question_path(@question) %>
+<%= link_to 'Back', test_questions_path(@question) %>
