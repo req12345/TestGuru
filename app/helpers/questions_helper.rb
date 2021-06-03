@@ -1,9 +1,9 @@
 module QuestionsHelper
   def question_header(question)
-    if Question.new_record?
-      puts "Create new question"
+    if question.new_record?
+      "Create new question"
     else
-      puts "Edit question"
+      "Edit question"
     end
   end
 end
