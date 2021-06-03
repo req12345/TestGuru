@@ -6,13 +6,5 @@
     <th>Questions</th>
   </tr>
 
-  <% @questions.each do |question| %>
-
-    <tr>
-      <% @number ||= 1 %>
-      <td><%= @number  %></td>
-      <td><%= question.body %></td>
-      <% @number += 1 %>
-    </tr>
-    <% end %>
+  <%= render @questions %>
 </table>

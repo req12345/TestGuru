@@ -1,0 +1,10 @@
+
+<tr>
+  <% @number ||= 0 %>
+  <td><%= @number  %></td>
+  <td><%= test.title %></td>
+  <td><%= test.level %></td>
+  <td><%= test.category.title %></td>
+  <td><%= test.questions.size %></td>
+  <% @number += 1 %>
+</tr>

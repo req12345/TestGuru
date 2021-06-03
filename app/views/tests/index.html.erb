@@ -6,16 +6,8 @@
     <th>Title</th>
     <th>Level</th>
     <th>Category</th>
+    <th>Questions</th>
   </tr>
 
-  <% @tests.each do |test| %>
-    <tr>
-      <% @number ||= 1 %>
-      <td><%= @number  %></td>
-      <td><%= test.title %></td>
-      <td><%= test.level %></td>
-      <td><%= test.category.title %></td>
-      <% @number += 1 %>
-    </tr>
-    <% end %>
+  <%= render @tests  %>
 </table>
