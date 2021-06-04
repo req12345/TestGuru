@@ -1,35 +1,43 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create index]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[create index new destroy]
+  before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    questions = @test.questions
-    questions_html = ''
-    questions_html << "<h1>#{@test.title}</h1>"
-    questions.each { |q| questions_html << "<p>#{q.id} - #{q.body}</p>" }
-    render inline: questions_html
+    @questions = @test.questions
   end
 
   def show
     @test = @question.test
-    render inline: '<h1> Test: <%= @test.title %></h1> <p>Question № <%= @question.id %>. <%= @question.body %><p>'
   end
 
-  def new; end
+  def new
+    @question = Question.new
+  end
+
+  def edit; end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
+  end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      render inline: '<p>Question № <%= @question.id %>. "<%= @question.body %>" created<p>'
+      redirect_to @question
     else
-      render plain: 'The question was not created'
+      render :new
     end
   end
 
   def destroy
     @question.destroy
+    redirect_to test_questions_path(@question.test)
   end
 
   private
