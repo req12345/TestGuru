@@ -1,11 +1,14 @@
 <h1>Test: <%= @test.title %></h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%= link_to 'New question', new_test_question_path(@test) %>
 <h3>Questions:</h3>
 <% render @test.questions %>
 
 <%= link_to 'Edit', edit_test_path(@test) %>
 =======
+=======
+>>>>>>> fe20575 ([ADD] test views)
 <h3>Questions:</h3>
 <% @test.questions.each do |question| %>
   <p><%= question.body %></p>
@@ -14,5 +17,8 @@
 <%= link_to 'New test', new_test_path %>
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'New question', new_test_question_path(@test) %>
+<<<<<<< HEAD
+>>>>>>> fe20575 ([ADD] test views)
+=======
 >>>>>>> fe20575 ([ADD] test views)
 <%= link_to 'Back', tests_path %>

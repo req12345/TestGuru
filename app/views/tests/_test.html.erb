@@ -5,8 +5,14 @@
   <td><strong><%= test.questions.size %></strong></td>
   <td><strong><%= test.author.name %></strong></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <td><%= link_to 'Show', test_questions_path(test) %></td>
   <td><%= link_to 'Edit', edit_test_path(test) %></td>
+=======
+  <td><%= link_to 'Show', test_path(test) %></td>
+  <td><%= link_to 'Edit', edit_test_path(test) %></td>
+  <td><%= link_to 'New question', new_test_question_path(test) %></td>
+>>>>>>> fe20575 ([ADD] test views)
 =======
   <td><%= link_to 'Show', test_path(test) %></td>
   <td><%= link_to 'Edit', edit_test_path(test) %></td>
