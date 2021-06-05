@@ -1,4 +1,6 @@
-  <%= link_to 'New question', new_test_question_path %>
+<h1><%= @test.title %></h1>
+<%= link_to 'New question', new_test_question_path %>
+<%= link_to 'Back', tests_path %>
 <table>
   <tr>
     <th>Questions</th>
@@ -6,5 +8,4 @@
   </tr>
 
   <%= render @questions %>
-  <%= link_to 'Back', test_path(@test) %>
 </table>
