@@ -14,7 +14,9 @@ class TestPassagesController < ApplicationController
 
     if @test_passage.completed?
       redirect_to result_test_passage_path(@test_passage)
-    render :show
+    else
+      render :show
+    end  
   end
 
   private
