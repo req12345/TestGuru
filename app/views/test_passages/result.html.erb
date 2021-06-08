@@ -1,1 +1,11 @@
-<h1>The <%= @test_passage.test.title %> test was completed!</h1>
+<h1>The <%= @test_passage.test.title %> test was finished!</h1>
+
+<% if @test_passage.test_successful %>
+  <h3>You successfully complete the test on <b style="color:#00FF00"> <%= @test_passage.player_passage_percentes %></b>%</h3>
+<% end %>
+
+<% if @test_passage.test_failed %>
+  <h3>You failed the test, just <b style="color:#FF0000"> <%= @test_passage.player_passage_percentes %></b>%</h3>
+<% end %>
+
+<%= link_to 'Back to tests', root_path %>

@@ -1,4 +1,5 @@
 class TestPassage < ApplicationRecord
+  CONDITION_OF_PASSAGE = 85
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -16,13 +17,21 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-    test.questions.index(current_question)+1
+    test.questions.index(current_question) + 1
   end
 
-  def total_test_questions
-    test.questions.size
+  def player_passage_percentes
+    ((correct_questions * 100).to_f/test.questions.count).round(2)
   end
-  
+
+  def test_successful
+    true if player_passage_percentes >= CONDITION_OF_PASSAGE
+  end
+
+  def test_failed
+    true if player_passage_percentes < CONDITION_OF_PASSAGE
+  end
+
   private
 
   def before_validation_set_current_question
