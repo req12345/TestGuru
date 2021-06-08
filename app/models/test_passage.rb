@@ -15,6 +15,14 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def current_question_number
+    test.questions.index(current_question)+1
+  end
+
+  def total_test_questions
+    test.questions.size
+  end
+  
   private
 
   def before_validation_set_current_question
@@ -32,11 +40,11 @@ class TestPassage < ApplicationRecord
     current_question.answers.correct_answer
   end
 
-   def next_question
-     unless current_question
-       test.questions.first
-     else
-       test.questions.order(:id).where('id > ?', current_question.id).first
-     end
-   end
+  def next_question
+    if current_question
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    else
+      test.questions.first
+    end
+  end
 end
