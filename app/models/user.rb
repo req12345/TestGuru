@@ -7,8 +7,11 @@ class User < ApplicationRecord
   has_many :author_tests, class_name: 'Test', foreign_key: :author_id
 
   has_secure_password
-  
-  validates :name, :email, presence: true
+
+  validates :name, presence: true
+  validates :email, presence: true,
+                    format: { with: URI::MailTo::EMAIL_REGEXP },
+                    uniqueness: { case_sensitive: false }
 
   def tests_by_level(level)
     tests.where(level: level)
