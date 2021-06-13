@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create([
-  {name: 'Roland Deschain', skill: 3},
-  {name: 'Eddie Dean'},
-  {name: 'Susannah Dean', skill: 2},
-  {name: 'Oy', skill: 1},
-  {name: 'Jake Chambers'}])
+  {name: 'Roland Deschain', skill: 3, email: 'roland@gmail.com', password: 'qweszxc'},
+  {name: 'Eddie Dean', email: 'eddie@gmail.com', password: '12345'},
+  {name: 'Susannah Dean', skill: 2, email: 'susannah@gmail.com', password: 'qazokm'},
+  {name: 'Oy', skill: 1, email: 'oy@gmail.com', password: 'poiuyt'},
+  {name: 'Jake Chambers', email: 'jake@gmail.com', password: '09876'}])
 
 category = Category.create([
   {title: 'Music'},
@@ -18,12 +18,12 @@ category = Category.create([
   {title: 'Films'}])
 
 test = Test.create([
-  {title: 'Guitar', level: 1, category: category[0], author: user[0]},
-  {title: 'Piano', level: 2, category: category[0], author: user[0]},
-  {title: 'Mammals', level: 3, category: category[1], author: user[1]},
-  {title: 'Reptiles', level: 4, category: category[1], author: user[2]},
-  {title: 'Comedies', level: 5, category: category[2], author: user[3]},
-  {title: 'Thriller', level: 6, category: category[2], author: user[4]}])
+  {title: 'Guitar', level: 1, category: category[0], author_id: user[0].id},
+  {title: 'Piano', level: 2, category: category[0], author_id: user[1].id},
+  {title: 'Mammals', level: 3, category: category[1], author_id: user[2].id},
+  {title: 'Reptiles', level: 4, category: category[1], author_id: user[3].id},
+  {title: 'Comedies', level: 5, category: category[2], author_id: user[4].id},
+  {title: 'Thriller', level: 6, category: category[2], author_id: user[1].id}])
 
 question = Question.create([
   {body: 'Guitar question № 1', test: test[0]},
