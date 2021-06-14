@@ -1,5 +1,5 @@
 <h1>Fancy tests:</h1>
-
+<%= link_to 'New test', new_test_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -7,7 +7,7 @@
     <th>Category</th>
     <th>Questions</th>
     <th>Author</th>
-    <th>Actions</th>
+    <th colspan="4">Actions</th>
   </tr>
 
   <%= render @tests  %>

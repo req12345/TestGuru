@@ -16,7 +16,7 @@
   </p>
   <p>
     <%= form.label :author %>
-    <%= form.collection_select :author, User.all, :id, :name, prompt: true %>
+    <%= form.collection_select :author, User.all, :id, :first_name, prompt: true %>
   </p>
   <br>
 
