@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, shallow: true
 
     member do
@@ -19,5 +19,9 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+  end
+
+  namespace :admin do
+    resources :tests
   end
 end
