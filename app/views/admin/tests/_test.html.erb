@@ -4,12 +4,11 @@
   <td><strong><%= test.category.title %></strong></td>
   <td><strong><%= test.questions.size %></strong></td>
   <td><strong><%= test.author.first_name %></strong></td>
-  <td><%= link_to 'Show', test_questions_path(test) %></td>
-  <td><%= link_to 'Edit', edit_test_path(test) %></td>
+  <td><%= link_to 'Show', admin_test_path(test) %></td>
+  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
   <td><%= link_to 'Delete',
-                   test_path(test),
+                   admin_test_path(test),
                    method: :delete,
                    data: { confirm: 'Are you sure?' }%>
   </td>
-  <td><%= button_to 'Start', start_test_path(test), method: :post %></td>
 </tr>
