@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :tests, only: :index do
-    resources :questions, only: :index, shallow: true
+    resources :questions, only: :index, shallow: true do
+      resources :answers, shallow: true
 
     member do
       post :start
     end
+  end
   end
 
   resources :test_passages, only: %i[show update] do
