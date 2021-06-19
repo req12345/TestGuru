@@ -9,6 +9,23 @@
     <th>Author</th>
     <th colspan="3">Actions</th>
   </tr>
+    <%= render @tests  %>
+</table>
 
-  <%= render @tests  %>
+
+
+  <h2>Questions:</h2>
+
+  <%= link_to "Create question", new_admin_question_path(@test) %>
+
+<table>
+  <thead>
+  <tr>
+    <th>Question body</th>
+    <th>Question title</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
+
+  <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </table>

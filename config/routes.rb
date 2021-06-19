@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :tests, only: :index do
     resources :questions, only: :index, shallow: true do
-      resources :answers, shallow: true
+      resources :answers, only: :index, shallow: true
 
     member do
       post :start
@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :tests
     resources :questions
+    resources :answers
   end
 end

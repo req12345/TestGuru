@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+<h1> Question: <%= @question.body %></h1>
+<p>Answer: <%= @answer.body %></p>
+<%= link_to 'Edit', edit_admin_answer_path(@question) %>
+<%= link_to 'Back', admin_tests_path %>

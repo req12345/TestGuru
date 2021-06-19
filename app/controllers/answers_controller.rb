@@ -12,45 +12,37 @@ class AnswersController < ApplicationController
     @answer = Answer.new
   end
 
-  def edit
+  def edit; end
+
+  def update
+    if @question.answer.update(answer_params)
+      redirect_to @answer
+    else
+      render :edit
+    end
   end
 
   def create
-    @answer = Answer.new(answer_params)
-
-    respond_to do |format|
+    @answer = @question.answers.new(answer_params)
       if @answer.save
-        format.html { redirect_to @answer, notice: "Answer was successfully created." }
+        redirect_to @answer
       else
-        format.html { render :new, status: :unprocessable_entity }
+        render :new
       end
     end
-  end
-
-  def update
-    respond_to do |format|
-      if @answer.update(answer_params)
-        format.html { redirect_to @answer, notice: "Answer was successfully updated." }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-      end
-    end
-  end
 
   def destroy
     @answer.destroy
-    respond_to do |format|
-      format.html { redirect_to answers_url, notice: "Answer was successfully destroyed." }
-    end
+    redirect_to admin_answer_path(@answer.question)
   end
 
   private
-  
-    def set_answer
-      @answer = Answer.find(params[:id])
-    end
 
-    def answer_params
-      params.fetch(:answer, {})
-    end
+  def set_answer
+    @answer = Answer.find(params[:id])
+  end
+
+  def answer_params
+    params.require(:answer).permit(:body)
+  end
 end
