@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :tests, only: :index do
-    resources :questions, shallow: true
+    resources :questions, only: :index, shallow: true
 
     member do
       post :start
@@ -23,5 +23,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :tests
+    resources :questions
   end
 end
