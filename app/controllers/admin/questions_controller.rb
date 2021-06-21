@@ -13,7 +13,7 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def edit; end
