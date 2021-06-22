@@ -8,13 +8,10 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :tests, only: :index do
-    resources :questions, only: :index, shallow: true do
-      resources :answers, only: :index, shallow: true
 
     member do
       post :start
     end
-  end
   end
 
   resources :test_passages, only: %i[show update] do
@@ -24,8 +21,10 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :tests
-    resources :questions
-    resources :answers
+    resources :tests do
+      resources :questions, shallow: true do
+        resources :answers, shallow: true
+      end
+    end
   end
 end
