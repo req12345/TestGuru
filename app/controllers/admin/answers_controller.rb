@@ -1,5 +1,9 @@
-class AnswersController < ApplicationController
-  before_action :set_answer, only: %i[ show edit update destroy ]
+class Admin::AnswersController < ApplicationController
+
+  before_action :find_question, only: %i[ new create destroy ]
+  before_action :find_answer, only: %i[ show edit update destroy ]
+
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
   def index
     @answers = Answer.all
@@ -9,48 +13,48 @@ class AnswersController < ApplicationController
   end
 
   def new
-    @answer = Answer.new
+    @answer = @question.answers.new
   end
 
-  def edit
+  def edit; end
+
+  def update
+    if @answer.update(answer_params)
+      redirect_to admin_question_path(@answer)
+    else
+      render :edit
+    end
   end
 
   def create
-    @answer = Answer.new(answer_params)
-
-    respond_to do |format|
+    @answer = @question.answers.new(answer_params)
       if @answer.save
-        format.html { redirect_to @answer, notice: "Answer was successfully created." }
+        redirect_to admin_question_path(@answer.question)
       else
-        format.html { render :new, status: :unprocessable_entity }
+        render :new
       end
     end
-  end
-
-  def update
-    respond_to do |format|
-      if @answer.update(answer_params)
-        format.html { redirect_to @answer, notice: "Answer was successfully updated." }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-      end
-    end
-  end
 
   def destroy
     @answer.destroy
-    respond_to do |format|
-      format.html { redirect_to answers_url, notice: "Answer was successfully destroyed." }
-    end
+    redirect_to admin_question_path(@answer.question)
   end
 
   private
-  
-    def set_answer
-      @answer = Answer.find(params[:id])
-    end
 
-    def answer_params
-      params.fetch(:answer, {})
-    end
+  def find_question
+    @question = Question.find_by(params[:question_id])
+  end
+
+  def find_answer
+    @answer = Answer.find(params[:id])
+  end
+
+  def answer_params
+    params.require(:answer).permit(:body)
+  end
+
+  def rescue_with_question_not_found
+    render plain: 'Answer not found'
+  end
 end
