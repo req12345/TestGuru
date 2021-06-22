@@ -1,18 +1,15 @@
 <h1> Test: <%= @test.title %></h1>
-<%= link_to 'New question', new_admin_question_path(@test) %>
-
-<p>Question: <%= @question.body %></p>
+<h2>Question: <%= @question.body %></h2>
+<h2>Answers:</h2>
+<%= link_to 'New answer', new_admin_question_answer_path(@test, @question) %>
 <table>
   <tr>
     <th>Body</th>
-    <th colspan="3">Actions</th>
+    <th>Correct answer</th>
+    <th colspan="2">Actions</th>
   </tr>
+  <%= render partial: 'admin/answers/answer', collection: @question.answers %>
 
-    <%= render @test.questions %>
   </table>
 
-<%= link_to 'Edit', edit_admin_question_path(@question) %>
-<%= link_to 'Back', admin_question_path(@question) %>
-
-<%= link_to 'Edit', edit_admin_question_path(@test) %>
-<%= link_to 'Back', admin_tests_path(@test) %>
+<%= link_to 'Back', admin_test_path(@test) %>
