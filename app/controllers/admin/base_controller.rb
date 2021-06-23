@@ -1,16 +1,12 @@
 class Admin::BaseController < ApplicationController
+  layout 'admin'
 
-layout 'admin'
+  before_action :authenticate_user!
+  before_action :admin_required!
 
-before_action :authenticate_user!
-before_action :admin_required!
+  private
 
   def admin_required!
     redirect_to root_path, alert: 'You are not authorized to view this page.' unless current_user.is_a?(Admin)
   end
-
-  def after_sign_in_path_for(resource)
-    stored_location_for(resource_or_scope) || super
-  end
-
 end
