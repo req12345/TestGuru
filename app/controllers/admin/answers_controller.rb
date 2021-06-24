@@ -1,7 +1,6 @@
 class Admin::AnswersController < ApplicationController
-
-  before_action :find_question, only: %i[ new create destroy ]
-  before_action :find_answer, only: %i[ show edit update destroy ]
+  before_action :find_question, only: %i[new create destroy]
+  before_action :find_answer, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
@@ -9,8 +8,7 @@ class Admin::AnswersController < ApplicationController
     @answers = Answer.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @answer = @question.answers.new
@@ -28,12 +26,12 @@ class Admin::AnswersController < ApplicationController
 
   def create
     @answer = @question.answers.new(answer_params)
-      if @answer.save
-        redirect_to admin_question_path(@answer.question)
-      else
-        render :new
-      end
+    if @answer.save
+      redirect_to admin_question_path(@answer.question)
+    else
+      render :new
     end
+  end
 
   def destroy
     @answer.destroy
