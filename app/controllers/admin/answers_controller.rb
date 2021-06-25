@@ -18,7 +18,7 @@ class Admin::AnswersController < ApplicationController
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_question_path(@answer)
+      redirect_to [:admin, @answer]
     else
       render :edit
     end
