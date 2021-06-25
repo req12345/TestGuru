@@ -21,6 +21,12 @@ en:
       answer:
         body: "Content"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   test_passages:
     result:
       header: "Test %{title} completed successfuly!"
@@ -37,3 +43,7 @@ en:
         success: "Test was successfuly created"
       index:
         header: "Tricky tests"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
