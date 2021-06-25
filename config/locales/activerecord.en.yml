@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      question: "Question"
+      answer: "Answer"
+      user: "User"
+
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+        category: "Категория"
+      question:
+        body: "Content"
+      answer:
+        body: "Content"
+      user:
+        first_name: "First_name"
+        last_name: "Last_name"
+        email: "Email"
+        password: "Password"
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        required: "must exist"
+        invalid: "is invalid"
+        taken: "has already been taken"
