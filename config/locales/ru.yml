@@ -1,0 +1,12 @@
+ru:
+
+  tests:
+    index:
+      header: "Доступные тесты"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан"
+      index:
+        header: "Доступные тесты"
