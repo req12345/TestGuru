@@ -21,6 +21,12 @@ ru:
       answer:
         body: "Содержание"
 
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+      successfully: "Вы успешно завершили тест на"
+      failed: "Вы провалили тест, всего"
+
   tests:
     index:
       header: "Доступные тесты"

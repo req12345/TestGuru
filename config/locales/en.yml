@@ -21,6 +21,12 @@ en:
       answer:
         body: "Content"
 
+  test_passages:
+    result:
+      header: "Test %{title} completed successfuly!"
+      successfully: "You successfully complete the test on"
+      failed: "You failed the test, just"
+
   tests:
     index:
       header: "Tricky Tests"
