@@ -1,5 +1,26 @@
 en:
 
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Content"
+      answer:
+        body: "Content"
+
   tests:
     index:
       header: "Tricky Tests"
