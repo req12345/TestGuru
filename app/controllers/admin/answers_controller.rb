@@ -4,10 +4,6 @@ class Admin::AnswersController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
-  def index
-    @answers = Answer.all
-  end
-
   def show; end
 
   def new
