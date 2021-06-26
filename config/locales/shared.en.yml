@@ -1,0 +1,29 @@
+en:
+  shared:
+    delete_confirmation: "Are you seriously?"
+    button:
+      enter: "Enter"
+      start: "Start"
+      next: "Next question"
+    links:
+      new_test: "Create new test"
+      new_question: "Create new question"
+      new_answer: "Create new answer"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      back: "Back"
+      thinknetica: "Study project in online-scholl ThinkNetica"
+      log_out: "Log out"
+      log_in: "Log in"
+      sign_up: "Sign up"
+      forgot_your_password: "Forgot forgot_your_password?"
+      did_not_recieve_confirmation_instructions: "did not recieve confirmation instructions?"
+      did_not_recieve_unlock_instructions: "did not receive unlock instructions?"
+      sign_in_with: "Sign in with"
+    nav:
+      admin_nav: "Admin Panel | TestGuru"
+      welcome: "Welcome, "
+      guru: " Guru"
+    flash:
+      hello: "Hello, %{user_first_name}!"

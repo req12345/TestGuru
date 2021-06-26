@@ -28,16 +28,29 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибок"
+    footer:
+      author: "Бахметов Иван"
+      project_description: "это проект по системе управления тестами."
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
       successfully: "Вы успешно завершили тест на"
       failed: "Вы провалили тест, всего"
+    show:
+      passing: "Прохождение теста %{test_title}"
+      total_questions: "Всего вопросов: %{questions_count}"
+      current_question: "Текущий вопрос № %{number}"
 
   tests:
     index:
       header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      questions: "Вопросов"
+      author: "Автор"
+      actions: "Действия"
 
   admin:
     tests:
@@ -45,7 +58,37 @@ ru:
         success: "Тест был успешно создан"
       index:
         header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        questions: "Вопросов"
+        author: "Автор"
+        actions: "Действия"
+      show:
+        header: "Тест: %{title} | Категория: %{category}"
+        header2: "Вопросы"
+        question_body: "Содержание вопросов"
+        actions: "Действия"
+    questions:
+      show:
+        header1: "Тест: %{test_title}"
+        header2: "Вопрос: %{question_body}"
+        header3: "Ответы:"
+        body: "Содержание ответа"
+        correct_answer: "Правильный ответ?"
+        actions: "Действия"
+      answers:
+        show:
+          header1: "Ответ на вопрос: %{question}"
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  devise:
+    sessions:
+      new:
+        header: "Войдите во врата Гуру"
+        email: "Почта"
+        password: "Пароль"
+        remember_me: "Запомнить меня"

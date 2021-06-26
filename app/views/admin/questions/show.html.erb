@@ -1,15 +1,15 @@
-<h1> Test: <%= @test.title %></h1>
-<h2>Question: <%= @question.body %></h2>
-<h2>Answers:</h2>
-<%= link_to 'New answer', new_admin_question_answer_path(@test, @question) %>
+<h1><%= t('.header1', test_title: @test.title) %></h1>
+<h2><%= t('.header2', question_body: @question.body) %></h2>
+<h2><%= t('.header3') %></h2>
+<%= link_to t('shared.links.new_answer'), new_admin_question_answer_path(@test, @question) %>
 <table>
   <tr>
-    <th>Body</th>
-    <th>Correct answer</th>
-    <th colspan="2">Actions</th>
+    <th><%= t('.body') %></th>
+    <th><%= t('.correct_answer') %></th>
+    <th colspan="2"><%= t('.actions') %></th>
   </tr>
   <%= render partial: 'admin/answers/answer', collection: @question.answers %>
 
   </table>
 
-<%= link_to 'Back', admin_test_path(@test) %>
+<%= link_to t('shared.links.back'), admin_test_path(@test) %>

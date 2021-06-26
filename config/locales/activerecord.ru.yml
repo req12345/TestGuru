@@ -18,7 +18,7 @@ ru:
       user:
         first_name: "Имя"
         last_name: "Фамилия"
-        email: "Почтовый адрес"
+        email: "Почта"
         password: "Пароль"
 
     errors:

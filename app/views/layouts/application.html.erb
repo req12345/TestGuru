@@ -13,11 +13,11 @@
   <body>
     <% if user_signed_in? %>
       <div class="nav user">
-        Welcome, <b><%= current_user.first_name %></b> Guru
+        <%= t('shared.nav.welcome') %><b><%= current_user.first_name %></b><%= t('shared.nav.guru') %>
       </div>
 
       <div class="nav user">
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+        <%= link_to t('shared.links.log_out'), destroy_user_session_path, method: :delete %>
       </div>
     <% end %>
     <%= render 'shared/flash' %>
