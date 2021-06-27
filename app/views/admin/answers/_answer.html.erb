@@ -5,6 +5,6 @@
   <td><%= link_to t('shared.links.delete'),
                    admin_answer_path(answer),
                    method: :delete,
-                   data: { confirm: 'Are you sure?' }%>
+                   data: { confirm: t('shared.delete_confirmation') }%>
   </td>
 </tr>
