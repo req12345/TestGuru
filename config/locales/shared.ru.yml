@@ -27,3 +27,5 @@ ru:
       guru: " Гуру"
     flash:
       hello: "Привет, %{user_first_name}!"
+    prompt:
+      select: "Пожалуйста, выберите"

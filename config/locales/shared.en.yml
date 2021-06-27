@@ -27,3 +27,5 @@ en:
       guru: " Guru"
     flash:
       hello: "Hello, %{user_first_name}!"
+    prompt:
+      select: "Please select"
