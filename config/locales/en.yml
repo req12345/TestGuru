@@ -89,3 +89,8 @@ en:
         email: "Email"
         password: "Password"
         remember_me: "Remember me"
+    registrations:
+      new:
+        header: "Become a Guru"
+        password_confirmation: "Password confirmation"
+        password_charecters_min: "characters minimum"

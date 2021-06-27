@@ -5,6 +5,7 @@ en:
       enter: "Enter"
       start: "Start"
       next: "Next question"
+      sign_up: "Sign up"
     links:
       new_test: "Create new test"
       new_question: "Create new question"
