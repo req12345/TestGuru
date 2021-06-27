@@ -1,33 +1,96 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Content"
+      answer:
+        body: "Content"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      author: "Bakhmetov Ivan"
+      project_description: "is a porject about test managment system."
+
+  test_passages:
+    result:
+      header: "Test %{title} completed successfuly!"
+      successfully: "You successfully complete the test on"
+      failed: "You failed the test, just"
+    show:
+      passing: "Passing the %{test_title} test"
+      total_questions: "Total questions: %{questions_count}"
+      current_question: "Current questions № %{number}"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      questions: "Questions"
+      author: "Author"
+      actions: "Actions"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfuly created"
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions: "Questions"
+        author: "Author"
+        actions: "Actions"
+      show:
+        header: "Test: %{title} | Category: %{category}"
+        header2: "Questions"
+        question_body: "Questions content"
+        actions: "Actions"
+    questions:
+      show:
+        header1: "Test: %{test_title}"
+        header2: "Question: %{question_body}"
+        header3: "Answers:"
+        body: "Answer content"
+        correct_answer: "Correct answer?"
+        actions: "Actions"
+      answers:
+        show:
+          header1: "Answer for question: %{question}"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  devise:
+    sessions:
+      new:
+        header: "Enter the Guru Gates"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+    registrations:
+      new:
+        header: "Become a Guru"
+        password_confirmation: "Password confirmation"
+        password_charecters_min: "characters minimum"

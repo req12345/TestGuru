@@ -4,10 +4,6 @@ class Admin::AnswersController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
-  def index
-    @answers = Answer.all
-  end
-
   def show; end
 
   def new
@@ -18,7 +14,7 @@ class Admin::AnswersController < ApplicationController
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_question_path(@answer)
+      redirect_to [:admin, @answer]
     else
       render :edit
     end

@@ -1,6 +1,7 @@
 <footer>
   <br>
-  <p>© <%= year_current %> Bakhmetov Ivan</p>
-  <p> <%= github_url('req12345', 'TestGuru') %> is a porject about test managment system.</p>
-  <%= link_to 'Study project in online-scholl ThinkNetica', 'http://www.thinknetica.com', target: '_blank' %>
+  <p><%= t('.author')%></p>
+  <p> <%= github_url('req12345', 'TestGuru')%> <%= t('.project_description')%></p>
+  <%= link_to t('.thinknetica'), 'http://www.thinknetica.com', target: '_blank' %>
+  <p>© <%= year_current %></p>
 </footer>

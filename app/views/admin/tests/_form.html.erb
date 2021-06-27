@@ -3,16 +3,16 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
 <%= render 'shared/errors', resource:  @test %>
   <p>
-    <%= form.label :title %>
+    <%= form.label :title, t('.title') %>
     <%= form.text_field :title, id: :test_title %>
   </p>
   <p>
-    <%= form.label :level %>
+    <%= form.label :level, t('.level') %>
     <%= form.number_field :level, id: :test_level %>
   </p>
   <p>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+    <%= form.label :category_id, t('.category') %>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: t('shared.prompt.select') %>
   </p>
   <br>
 
