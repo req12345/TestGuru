@@ -2,6 +2,8 @@
   <div class="col col-md-4">
     <h2><%= t('.header') %></h2>
 
+    <div class="card border-primary">
+      <div class="card-body">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">
             <p>
@@ -26,7 +28,9 @@
             <%= f.submit t('shared.button.enter'), class: 'btn btn-primary' %>
           </div>
         <% end %>
-  
+      </div>
+    </div>
+
     <div class="mt-1">
       <%= render "devise/shared/links" %>
     </div>
