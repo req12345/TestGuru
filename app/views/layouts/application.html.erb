@@ -11,18 +11,12 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <div class="nav user">
-        <%= t('shared.nav.welcome') %><b><%= current_user.first_name %></b><%= t('shared.nav.guru') %>
-      </div>
-
-      <div class="nav user">
-        <%= link_to t('shared.links.log_out'), destroy_user_session_path, method: :delete %>
-      </div>
-    <% end %>
-    <%= render 'shared/flash' %>
     <%= render 'shared/nav' %>
+
+    <div class="container">
+      <%= render 'shared/flash' %>
       <%= yield %>
-    <%= render 'shared/footer' %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
