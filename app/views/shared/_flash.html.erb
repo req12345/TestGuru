@@ -1,5 +1,7 @@
-<% if flash.present? %>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :p, msg, :class => "flash #{name}" %>
+<div class="container">
+  <% flash.each do |type, msg| %>
+    <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show">
+      <%= msg %>
+    </div>
   <% end %>
-<% end %>
+</div>
