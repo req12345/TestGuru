@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Panel | TestGuru</title>
+    <title><%= t('shared.nav.admin_nav') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +11,12 @@
   </head>
 
   <body>
+    <%= render 'shared/nav' %>
 
+    <div class="container">
     <%= render 'shared/flash' %>
-    <%= render 'admin/tests/nav' %>
-      <%= yield %>
+    <%= yield %>
     <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

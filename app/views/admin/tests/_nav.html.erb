@@ -1,8 +1,0 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"><%= t('shared.nav.admin_nav') %></span>
-
-  <div class="nav-admin user">
-    <%= t('shared.nav.welcome') %> <b class="nav-admin user-email"><%= current_user.first_name %></b><%= t('shared.nav.guru') %> |
-    <%= link_to t('shared.links.log_out'), destroy_user_session_path, method: :delete %>
-  </div>
-</div>

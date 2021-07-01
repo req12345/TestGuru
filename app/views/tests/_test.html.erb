@@ -5,5 +5,5 @@
   <td><strong><%= test.questions.size %></strong></td>
   <td><strong><%= test.author.first_name %></strong></td>
 
-  <td><%= button_to t('shared.button.start'), start_test_path(test), method: :post %></td>
+  <td><%= button_to t('shared.button.start'), start_test_path(test), method: :post, class: 'btn btn-success btn-sm' %></td>
 </tr>
