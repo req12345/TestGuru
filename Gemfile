@@ -40,6 +40,10 @@ gem 'devise', '~> 4.0'
 
 gem 'faraday'
 
+#Configuration variables
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # UI
 
 gem 'bootstrap', '~> 5.0.1'
