@@ -281,10 +281,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise (~> 4.0)
-<<<<<<< HEAD
   dotenv-rails
-=======
->>>>>>> 2e37e79da496cdc1c2e0acf13530ae408974a5ad
   faraday
   jbuilder (~> 2.7)
   jquery-rails
