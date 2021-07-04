@@ -1,12 +1,12 @@
 <tr>
-  <td><strong><%= test.title %></strong></td>
-  <td><%= test_level(test) %></td>
-  <td><strong><%= test.category.title %></strong></td>
-  <td><strong><%= test.questions.size %></strong></td>
-  <td><strong><%= test.author.first_name %></strong></td>
-  <td><%= link_to t('shared.links.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('shared.links.edit'), edit_admin_test_path(test) %></td>
-  <td><%= link_to t('shared.links.delete'),
+  <td class="text-center"><strong><%= test.title %></strong></td>
+  <td class="text-center"><%= test_level(test) %></td>
+  <td class="text-center"><strong><%= test.category.title %></strong></td>
+  <td class="text-center"><strong><%= test.questions.size %></strong></td>
+  <td class="text-center"><strong><%= test.author.first_name %></strong></td>
+  <td class="text-center"><%= link_to t('shared.links.show'), admin_test_path(test) %></td>
+  <td class="text-center"><%= link_to t('shared.links.edit'), edit_admin_test_path(test) %></td>
+  <td class="text-center"><%= link_to t('shared.links.delete'),
                    admin_test_path(test),
                    method: :delete,
                    data: { confirm: t('shared.delete_confirmation') }%>

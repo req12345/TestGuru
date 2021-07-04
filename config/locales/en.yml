@@ -80,6 +80,12 @@ en:
       answers:
         show:
           header1: "Answer for question: %{question}"
+      gists:
+        index:
+          header: "Gists"
+          question: "Question"
+          gist_url: "Hash Gist"
+          user: "User email"
 
   tests_mailer:
     completed_test:

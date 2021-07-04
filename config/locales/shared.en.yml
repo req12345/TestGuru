@@ -6,10 +6,13 @@ en:
       start: "Start"
       next: "Next question"
       sign_up: "Sign up"
+
     links:
       new_test: "Create new test"
       new_question: "Create new question"
       new_answer: "Create new answer"
+      new_gist: "Create gist fo Question"
+      gists_list: "List of Gists"
       show: "Show"
       edit: "Edit"
       delete: "Delete"
@@ -22,11 +25,14 @@ en:
       did_not_recieve_confirmation_instructions: "did not recieve confirmation instructions?"
       did_not_recieve_unlock_instructions: "did not receive unlock instructions?"
       sign_in_with: "Sign in with"
+
     nav:
       admin_nav: "Admin Panel | TestGuru"
       welcome: "Welcome, "
       guru: " Guru"
+
     flash:
       hello: "Hello, %{user_first_name}!"
+
     prompt:
       select: "Please select"

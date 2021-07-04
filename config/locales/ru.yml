@@ -79,10 +79,15 @@ ru:
         body: "Содержание ответа"
         correct_answer: "Правильный ответ?"
         actions: "Действия"
-      answers:
-        show:
-          header1: "Ответ на вопрос: %{question}"
-
+    answers:
+      show:
+        header1: "Ответ на вопрос: %{question}"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        gist_url: "Хэш Gist"
+        user: "Почта пользователя"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"

@@ -15,6 +15,6 @@
     </p>
   <% end %>
 
-  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
+  <p><%= link_to t('shared.links.new_gist'), gist_test_passage_path(@test_passage), method: :post %></p>
   <p><%= form.submit t('shared.button.next') %></p>
 <% end %>
