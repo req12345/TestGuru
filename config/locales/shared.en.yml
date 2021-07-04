@@ -11,7 +11,7 @@ en:
       new_test: "Create new test"
       new_question: "Create new question"
       new_answer: "Create new answer"
-      new_gist: "Create gist fo Question"
+      new_gist: "Create gist for Question"
       gists_list: "List of Gists"
       show: "Show"
       edit: "Edit"
