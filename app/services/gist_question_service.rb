@@ -16,7 +16,7 @@ class GistQuestionService
     {
       description: "A question about #{@test.title} from TestGuru",
       files: {
-        "test-guru-question.txt" => {
+        'test-guru-question.txt' => {
           content: gist_content
         }
       }
