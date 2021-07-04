@@ -1,7 +1,7 @@
 require 'dotenv/load'
 class GitHubClient
-  attr_reader @http_client
-  
+  attr_reader :http_client
+
   def initialize
     @http_client = setup_http_client
   end
