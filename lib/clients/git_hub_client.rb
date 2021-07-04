@@ -9,8 +9,8 @@ class GitHubClient
 
   def create_gist(params)
     @http_client.post('gists') do |request|
-      request.headers['Autorization'] = "token #{ENV["GIT_HUB_ACCESS_TOKEN"]}"
-      request.headers['Content-Type'] = 'applications/json'
+      request.headers['Authorization'] = "token #{ENV["GIT_HUB_ACCESS_TOKEN"]}"
+      request.headers['Content-Type'] = 'application/json'
       request.body = params.to_json
     end
   end
