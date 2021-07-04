@@ -40,6 +40,9 @@ ru:
       passing: "Прохождение теста %{test_title}"
       total_questions: "Всего вопросов: %{questions_count}"
       current_question: "Текущий вопрос № %{number}"
+    gist:
+      success: "Gist успешно сохранён!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   tests:
     index:
