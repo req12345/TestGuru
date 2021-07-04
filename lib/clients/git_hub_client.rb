@@ -1,4 +1,5 @@
 require 'dotenv/load'
+
 class GitHubClient
   attr_reader :http_client
 
