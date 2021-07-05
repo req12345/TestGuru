@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_07_04_145220) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.string "question", limit: 25
+    t.string "question"
     t.string "gist_hash"
     t.string "gist_url"
     t.integer "user_id", null: false
