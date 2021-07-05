@@ -35,11 +35,23 @@ group :development, :test do
 end
 
 gem 'devise', '~> 4.0'
+
+#NETWORKING
+
+gem 'faraday'
+gem "octokit", "~> 4.0"
+
+#Configuration variables
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # UI
+
 gem 'bootstrap', '~> 5.0.1'
 gem 'jquery-rails'
 
 # Localization
+
 gem 'rails-i18n', '~> 6.0.0'
 
 group :development do

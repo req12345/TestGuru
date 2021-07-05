@@ -2,9 +2,10 @@
 <h3><%= t('.total_questions', questions_count: @test_passage.test.questions.size) %></h3>
 
 <h3><%= t('.current_question', number: @test_passage.current_question_number) %></h3>
-<b>
+
+<p>
   <%= @test_passage.current_question.body %>
-</b>
+</p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answers_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -14,5 +15,6 @@
     </p>
   <% end %>
 
+  <p><%= link_to t('shared.links.new_gist'), gist_test_passage_path(@test_passage), method: :post %></p>
   <p><%= form.submit t('shared.button.next') %></p>
 <% end %>
