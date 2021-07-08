@@ -18,6 +18,7 @@ document.addEventListener('turbolinks:load', function () {
                     element.classList.add('invalid')
                     element.classList.remove('valid')
                 })
+                
             } else {
                 passwordInputAll.forEach(element => {
                     element.classList.add('valid')
