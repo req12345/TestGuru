@@ -6,13 +6,19 @@
   <%= link_to t('shared.links.new_test'), new_admin_test_path %>
 </p>
 <table class="table table-sm">
-  <tr class="table-primary">
-    <th scope="col" class="text-center"><%= t('.title') %></th>
-    <th scope="col" class="text-center"><%= t('.level') %></th>
-    <th scope="col" class="text-center"><%= t('.category') %></th>
-    <th scope="col" class="text-center"><%= t('.questions') %></th>
-    <th scope="col" class="text-center"><%= t('.author') %></th>
-    <th scope="col" class="text-center" colspan="3"><%= t('.actions') %></th>
-  </tr>
-    <%= render @tests  %>
+  <tbody>
+    <tr class="table-primary">
+      <th class="sort-by-title pointer">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th scope="col" class="text-center"><%= t('.level') %></th>
+      <th scope="col" class="text-center"><%= t('.category') %></th>
+      <th scope="col" class="text-center"><%= t('.questions') %></th>
+      <th scope="col" class="text-center"><%= t('.author') %></th>
+      <th scope="col" class="text-center" colspan="3"><%= t('.actions') %></th>
+    </tr>
+      <%= render @tests  %>
+  </tbody>
 </table>

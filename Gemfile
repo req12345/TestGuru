@@ -49,6 +49,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'bootstrap', '~> 5.0.1'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 # Localization
 
