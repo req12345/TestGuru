@@ -69,6 +69,8 @@ en:
         header2: "Questions"
         question_body: "Questions content"
         actions: "Actions"
+      form_inline:
+        submit: "OK"
     questions:
       show:
         header1: "Test: %{test_title}"

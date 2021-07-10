@@ -5,10 +5,12 @@
 <p>
   <%= link_to t('shared.links.new_test'), new_admin_test_path %>
 </p>
+
+<%= render 'shared/errors', resource: @test %>
 <table class="table table-sm">
   <tbody>
     <tr class="table-primary">
-      <th class="sort-by-title pointer">
+      <th scope="col" class="sort-by-title pointer text-center">
         <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide' %>
         <%= octicon 'arrow-down', class: 'text-success hide' %>
