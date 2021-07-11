@@ -20,6 +20,10 @@ class TestPassage < ApplicationRecord
     test.questions.index(current_question) + 1
   end
 
+  def total_questions
+    test.questions.count
+  end
+
   def player_passage_percentes
     ((correct_questions * 100).to_f/test.questions.count).round(2)
   end
