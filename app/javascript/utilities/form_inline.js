@@ -45,5 +45,4 @@ function formInlineHandler(testId) {
     formInline.classList.add('hide')
     link.textContent = 'Edit'
   }
-
 }
