@@ -7,8 +7,6 @@ document.addEventListener('turbolinks:load', function() {
     }
   }
 
-  // $('.form-inline-link').on('click', formInlineLinkHandler)
-
   let errors = document.querySelector('.resource-errors')
 
   if (errors) {
@@ -29,14 +27,7 @@ function formInlineHandler(testId) {
   let testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
   let formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
 
-  // let testTitle = $('.test-title[data-test-id="' + testId + '"]')
-  // let formInline = $('.form-inline[data-test-id="' + testId + '"]')
-
-  // $formInline.toggle()
-  // $testTitle.toggle()
-
   if (formInline.classList.contains('hide')) {
-  // if ($formInline.is(':visible')) {
     testTitle.classList.add('hide')
     formInline.classList.remove('hide')
     link.textContent = 'Cancel'
