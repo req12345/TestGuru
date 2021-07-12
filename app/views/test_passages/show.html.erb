@@ -1,8 +1,12 @@
 <h1><%= t('.passing', test_title: @test_passage.test.title) %> </h1>
 
-<%= content_tag :div, class: 'bar', data: { current_number: @test_passage.current_question_number,
-                                            total_questions: @test_passage.total_questions } do %>
-  <div class='progress_bar'>0%</div>
+<h4><%= t('.total_questions', questions_count: @test_passage.test.questions.size) %></h3>
+
+<h4><%= t('.current_question', number: @test_passage.current_question_number) %></h3>
+
+<%= content_tag :div, class: 'bar', data: { current_number: @test_passage.current_question_number, total_questions: @test_passage.total_questions } do %>
+  <%= content_tag :div, class: 'progress-bar' do %>
+  <% end %>
 <% end %>
 
 <p>
@@ -18,5 +22,5 @@
   <% end %>
 
   <p><%= link_to t('shared.links.new_gist'), gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit t('shared.button.next') %></p>
+  <p><%= form.submit t('shared.button.next'), class: 'submit' %></p>
 <% end %>
