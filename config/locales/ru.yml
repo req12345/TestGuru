@@ -71,6 +71,8 @@ ru:
         header2: "Вопросы"
         question_body: "Содержание вопросов"
         actions: "Действия"
+      form_inline:
+        submit: "OK"
     questions:
       show:
         header1: "Тест: %{test_title}"
