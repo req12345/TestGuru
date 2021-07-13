@@ -1,9 +1,8 @@
 document.addEventListener('turbolinks:load', function () {
-    currentProgress()
-
     let control = document.querySelector('.submit')
 
     if (control) {
+      currentProgress()
       control.addEventListener('click', currentProgress)
     }
 })
