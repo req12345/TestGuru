@@ -54,6 +54,14 @@ ru:
       author: "Автор"
       actions: "Действия"
 
+  feedbacks:
+    form:
+      feedback: "Отзыв"
+      user_name: "Имя пользователя"
+      email: "Почта"
+      header: "Заголовок"
+      content: "Содержание отзыва"
+
   admin:
     tests:
       create:

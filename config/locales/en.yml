@@ -27,7 +27,7 @@ en:
         other: "%{count} errors detected"
     footer:
       author: "Bakhmetov Ivan"
-      project_description: "is a porject about test managment system."
+      project_description: "is a porject of test managment system."
 
   test_passages:
     result:
@@ -51,6 +51,14 @@ en:
       questions: "Questions"
       author: "Author"
       actions: "Actions"
+
+  fedbacks:
+    form:
+      feedback: "Feedback"
+      user_name: "User name"
+      email: "Email"
+      header: "Header"
+      content: "Content"
 
   admin:
     tests:
