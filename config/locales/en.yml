@@ -59,6 +59,8 @@ en:
       email: "Email"
       header: "Header"
       content: "Content"
+    create:
+       success: "Thank you for your feedback, we will contact you shortly."
 
   admin:
     tests:
