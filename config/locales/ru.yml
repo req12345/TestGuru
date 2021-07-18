@@ -29,7 +29,7 @@ ru:
         other: "Обнаружено %{count} ошибок"
     footer:
       author: "Бахметов Иван"
-      project_description: "это проект по системе управления тестами."
+      project_description: "это проект системы управления тестами."
 
   test_passages:
     result:
