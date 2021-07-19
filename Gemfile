@@ -43,7 +43,7 @@ gem "octokit", "~> 4.0"
 
 #Configuration variables
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 
 # UI
 
