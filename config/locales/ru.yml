@@ -40,6 +40,8 @@ ru:
       passing: "Прохождение теста %{test_title}"
       total_questions: "Всего вопросов: %{questions_count}"
       current_question: "Текущий вопрос № %{number}"
+      in_development: "Тест на стадии разработки"
+      try_other: "Попробуйте пройти другие тесты"
     gist:
       success: " успешно сохранён!"
       failure: "Во время сохранения gist произошла ошибка"

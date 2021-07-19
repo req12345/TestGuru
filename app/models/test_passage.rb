@@ -43,7 +43,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    return if self.current_question.answers.empty? 
+    return if self.current_question.answers.empty?
 
     correct_answers_count = correct_answers.count
 

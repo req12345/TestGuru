@@ -38,6 +38,8 @@ en:
       passing: "Passing the %{test_title} test"
       total_questions: "Total questions: %{questions_count}"
       current_question: "Current questions № %{number}"
+      in_development: "Test is under development"
+      try_other: "Try other tests"
     gist:
       success: " was successfully created!"
       failure: "An error occured while saving gist"
