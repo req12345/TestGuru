@@ -37,7 +37,7 @@ class Admin::AnswersController < ApplicationController
   private
 
   def find_question
-    @question = Question.find_by(params[:question_id])
+    @question = Question.find(params[:question_id])
   end
 
   def find_answer
