@@ -29,7 +29,7 @@ ru:
         other: "Обнаружено %{count} ошибок"
     footer:
       author: "Бахметов Иван"
-      project_description: "это проект по системе управления тестами."
+      project_description: "это проект системы управления тестами."
 
   test_passages:
     result:
@@ -40,6 +40,8 @@ ru:
       passing: "Прохождение теста %{test_title}"
       total_questions: "Всего вопросов: %{questions_count}"
       current_question: "Текущий вопрос № %{number}"
+      in_development: "Тест на стадии разработки"
+      try_other: "Попробуйте пройти другие тесты"
     gist:
       success: " успешно сохранён!"
       failure: "Во время сохранения gist произошла ошибка"
@@ -53,6 +55,16 @@ ru:
       questions: "Вопросов"
       author: "Автор"
       actions: "Действия"
+
+  feedbacks:
+    form:
+      feedback: "Отзыв"
+      user_name: "Имя пользователя"
+      email: "Почта"
+      header: "Заголовок"
+      content: "Содержание отзыва"
+    create:
+      success: "Благодарим за отзыв, скором мы свяжемся с Вами."
 
   admin:
     tests:

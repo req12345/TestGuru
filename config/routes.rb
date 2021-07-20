@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
+  resources :feedbacks, only: %i[create new]
+
   resources :tests, only: :index do
 
     member do

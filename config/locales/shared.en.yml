@@ -6,6 +6,7 @@ en:
       start: "Start"
       next: "Next question"
       sign_up: "Sign up"
+      send: "Send"
 
     links:
       new_test: "Create new test"
@@ -25,6 +26,7 @@ en:
       did_not_recieve_confirmation_instructions: "did not recieve confirmation instructions?"
       did_not_recieve_unlock_instructions: "did not receive unlock instructions?"
       sign_in_with: "Sign in with"
+      leave_feedback: "Leave your feedback"
 
     nav:
       admin_nav: "Admin Panel | TestGuru"
