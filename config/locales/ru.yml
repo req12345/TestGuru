@@ -19,6 +19,10 @@ ru:
         body: "Содержание"
       answer:
         body: "Содержание"
+      badge:
+        title: "Название"
+        image_url: "Ссылка на изображение"
+        rule: "Правило"
 
   shared:
     errors:
@@ -30,6 +34,12 @@ ru:
     footer:
       author: "Бахметов Иван"
       project_description: "это проект системы управления тестами."
+
+  badges:
+    index:
+      title: "Название"
+      img_url: "Ссылка на изображение"
+      rule: "Условие получения"
 
   test_passages:
     result:
@@ -102,6 +112,13 @@ ru:
         question: "Вопрос"
         gist_url: "Хэш Gist"
         user: "Почта пользователя"
+    badges:
+      index:
+        header: "Список Badges"
+        title: "Название"
+        img_url: "Ссылка на изображение"
+        rule: "Правило"
+
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"

@@ -13,7 +13,9 @@ ru:
       new_question: "Создать новый вопрос"
       new_answer: "Создать новый ответ"
       new_gist: "Создать Gist к вопросу"
-      gists_list: "Список всех Gist"
+      new_badge: "Создать новый Badge"
+      gists_list: "Список Gists"
+      badges_list: "Список Badges"
       show: "Cмотреть"
       edit: "Изменить"
       delete: "Удалить"
@@ -27,6 +29,7 @@ ru:
       did_not_recieve_unlock_instructions: "Не получили инструкции по разблокировке?"
       sign_in_with: "Войдите с помощью"
       leave_feedback: "Оставьте свой отзыв"
+
     nav:
       admin_nav: "Панель администратора | TestGuru"
       welcome: "Добро пожаловать, "
