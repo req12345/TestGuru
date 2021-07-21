@@ -1,5 +1,5 @@
 class Admin::BadgesController < Admin::BaseController
-before_action :set_badge, %i[update destroy]
+before_action :set_badge, only: %i[update destroy]
 
   def index
     @badges = Badge.all
@@ -22,13 +22,13 @@ before_action :set_badge, %i[update destroy]
     if @badge.update(badge_params)
       redirect_to admin_badge_path(@badge)
     else
-      render :edit
+      render :new
     end
   end
 
   def destroy
     @badge.destroy
-    redirect_to admin_badge_path
+    redirect_to admin_badges_path
   end
 
   private
