@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :feedbacks, only: %i[create new]
-
+  resources :bages, only: %i[index]
   resources :tests, only: :index do
 
     member do
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :badges
+    resources :badges, except: %i[show edit]
     resources :gists, only: :index, shallow: true
     resources :tests do
       patch :update_inline, on: :member
