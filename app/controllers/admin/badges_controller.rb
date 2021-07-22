@@ -12,7 +12,7 @@ before_action :set_badge, only: %i[update destroy]
   def create
     @badge = current_user.badges.new(badge_params)
     if @badge.save
-      redirect_to [:admin, @badge], notice: t('.success')
+      redirect_to admin_badges_path, notice: t('.success')
     else
       render :new
     end
