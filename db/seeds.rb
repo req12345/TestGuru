@@ -98,9 +98,9 @@ answer = Answer.create([
   {body: 'Thriller Answer № 3 for question № 3', question: question[17], correct: true}])
 
 Badge.create([
-             {title: 'Выполнены все тесты Animal', image_url: 'http://clipart-library.com/2018-gallery/unicorn-clipart-16.png', rule: 'all_in_animal'},
-             {title: 'Выполнен тест с первого раза', image_url: 'http://clipart-library.com/images/kc8n9zKcr.jpg', rule: 'on_first_try'},
-             {title: 'Выполнены тесты 1 уровня', image_url: 'http://clipart-library.com/images/ziXeX8r8T.gif', rule: 'certain_level'}])
+             {title: 'Выполнены все тесты категории Музыка', image_url: 'http://clipart-library.com/2018-gallery/unicorn-clipart-16.png', rule: 'all_in_category_music'},
+             {title: 'Выполнен с первого раза!', image_url: 'http://clipart-library.com/images/kc8n9zKcr.jpg', rule: 'on_first_try'},
+             {title: 'Выполнил все тесты 1 уровня!', image_url: 'http://clipart-library.com/images/ziXeX8r8T.gif', rule: 'all_level_1_tests'}])
 
 UserBadge.create([
   {user_id: user[0], badge_id: badge[0]},
