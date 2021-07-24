@@ -6,6 +6,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question
 
+  scope :successfull, -> { where(success: true) }
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
@@ -30,6 +32,10 @@ class TestPassage < ApplicationRecord
 
   def test_successful
     true if player_passage_percentes >= CONDITION_OF_PASSAGE
+  end
+
+  def success_true
+    self.update(success: true)
   end
 
   def test_failed
