@@ -39,6 +39,8 @@ ru:
       recieved_at: "Дата получения"
     all_badges:
       header: 'Список возможных достижений'
+      title: "Название"
+      img_url: "Ссылка на изображение"
 
   test_passages:
     result:
@@ -114,6 +116,15 @@ ru:
     badges:
       index:
         header: "Список Badges"
+        title: "Название"
+        img_url: "Ссылка на изображение"
+        rule: "Правило"
+      show:
+        header: "Badge отредактирован"
+        title: "Название"
+        img_url: "Ссылка на зображение"
+        rule: "Правило" 
+      form:
         title: "Название"
         img_url: "Ссылка на изображение"
         rule: "Правило"

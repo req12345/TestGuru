@@ -115,6 +115,15 @@ en:
         title: "Title"
         img_url: "Image URL"
         rule: "Rule"
+      show:
+        header: "Badge updated"
+        title: "Title"
+        img_url: "Image URL"
+        rule: "Rule"        
+      form:
+        title: "Title"
+        img_url: "Image URL"
+        rule: "Rule"
 
   tests_mailer:
     completed_test:
