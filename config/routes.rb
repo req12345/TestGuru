@@ -9,9 +9,14 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :feedbacks, only: %i[create new]
-  resources :bages, only: %i[index]
-  resources :tests, only: :index do
 
+  resources :badges, only: %i[index] do
+    member do
+      get :all_badges
+    end
+  end
+
+  resources :tests, only: :index do
     member do
       post :start
     end
