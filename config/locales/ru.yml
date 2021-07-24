@@ -19,10 +19,6 @@ ru:
         body: "Содержание"
       answer:
         body: "Содержание"
-      badge:
-        title: "Название"
-        image_url: "Ссылка на изображение"
-        rule: "Правило"
 
   shared:
     errors:
@@ -37,9 +33,12 @@ ru:
 
   badges:
     index:
+      header: 'Ваши достижения'
       title: "Название"
       img_url: "Ссылка на изображение"
-      rule: "Условие получения"
+      recieved_at: "Дата получения"
+    all_badges:
+      header: 'Список возможных достижений'
 
   test_passages:
     result:

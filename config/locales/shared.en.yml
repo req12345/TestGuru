@@ -16,6 +16,8 @@ en:
       new_badge: "Create new Badge"
       gists_list: "List of Gists"
       badges_list: "List of Badges"
+      badges_existing: "List of existing Badges"
+      user_badges: "Your Bages"
       show: "Show"
       edit: "Edit"
       delete: "Delete"

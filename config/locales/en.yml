@@ -44,6 +44,15 @@ en:
       success: " was successfully created!"
       failure: "An error occured while saving gist"
 
+  badges:
+    index:
+      header: 'Your Badges'
+      title: "Title"
+      img_url: "Image url"
+      recieved_at: "Date of recieved"
+    all_badges:
+      header: 'List of existing Bages'
+
   tests:
     index:
       header: "Tricky Tests"

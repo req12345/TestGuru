@@ -16,6 +16,8 @@ ru:
       new_badge: "Создать новый Badge"
       gists_list: "Список Gists"
       badges_list: "Список Badges"
+      badges_existing: "Список существующих Badges"
+      user_badges: "Ваши достижения"
       show: "Cмотреть"
       edit: "Изменить"
       delete: "Удалить"
