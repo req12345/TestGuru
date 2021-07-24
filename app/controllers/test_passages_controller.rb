@@ -10,6 +10,14 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answers_ids])
 
     if @test_passage.completed?
+      if @test_passage.test_successful
+
+        @test_passage.success_true
+        badge = BadgeService.new(@test_passage)
+        badge.check
+        flash[:notice] = "Badge recieved!" if badge.recieved == true
+      end
+
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
