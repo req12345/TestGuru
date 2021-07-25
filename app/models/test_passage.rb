@@ -31,7 +31,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_successful
-    true if player_passage_percentes >= CONDITION_OF_PASSAGE
+    player_passage_percentes >= CONDITION_OF_PASSAGE
   end
 
   def success_true

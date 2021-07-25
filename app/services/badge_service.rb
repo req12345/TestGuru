@@ -9,7 +9,7 @@ class BadgeService
     @recieved = false
   end
 
-  def check
+  def call
     Badge.all.each do |badge|
        if send(badge.rule)
          @user.badges << badge
