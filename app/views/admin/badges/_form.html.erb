@@ -15,6 +15,9 @@
     <%= form.select :rule, Badge::BADGES_RULES, {prompt: true}, class: 'form-select' %>
   </p>
   <br>
-
+  <p>
+    <%= form.label :parameter, t('.parameter') %>
+    <%= form.text_field :parameter, id: :badge_parameter, class: 'form-control' %>
+  </p>
   <p><%= form.submit %></p>
 <% end %>

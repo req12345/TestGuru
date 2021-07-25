@@ -5,12 +5,14 @@
     <th class="align-middle"><%= t('.title') %></th>
     <th class="align-middle"><%= t('.img_url') %></th>
     <th class="align-middle"><%= t('.rule') %></th>
+    <th class="align-middle"><%= t('.parameter') %></th>
   </tr>
 
   <tr>
     <td class="align-middle"><%= @badge.title %></td>
-    <td class="align-middle"><%= image_tag @badge.image_url %></td>
+    <td class="align-middle"><%= image_tag @badge.image_url, size: "90x100" %></td>
     <td class="align-middle"><%= @badge.rule %></td>
+    <td class="align-middle"><%= @badge.parameter %></td>
   </tr>
 </table>
 

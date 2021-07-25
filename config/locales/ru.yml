@@ -119,16 +119,19 @@ ru:
         title: "Название"
         img_url: "Изображение"
         rule: "Правило"
+        parameter: "Параметр"
         actions: "Действия"
       show:
         header: "Badge отредактирован"
         title: "Название"
         img_url: "Изображение"
         rule: "Правило"
+        parameter: "Параметр"
       form:
         title: "Название"
         img_url: "Изображение"
         rule: "Правило"
+        parameter: "Параметр" 
       create:
         success: "Badge успешно создан"
 

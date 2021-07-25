@@ -115,16 +115,19 @@ en:
         title: "Title"
         img_url: "Image"
         rule: "Rule"
+        parameter: "Parameter"
         actions: "Actions"
       show:
         header: "Badge updated"
         title: "Title"
         img_url: "Image"
         rule: "Rule"
+        parameter: "Parameter"
       form:
         title: "Title"
         img_url: "Image"
         rule: "Rule"
+        parameter: "Parameter" 
       create:
         success: "Badge created successfully"
 

@@ -46,6 +46,6 @@ before_action :set_badge, only: %i[update destroy edit show]
   end
 
   def badge_params
-    params.require(:badge).permit(:title, :image_url, :rule)
+    params.require(:badge).permit(:title, :image_url, :rule, :parameter)
   end
 end
