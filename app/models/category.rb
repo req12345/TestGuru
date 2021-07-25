@@ -5,6 +5,4 @@ class Category < ApplicationRecord
   scope :animals, ->{ where(title: 'Animals') }
 
   validates :title, presence: true
-
-
 end

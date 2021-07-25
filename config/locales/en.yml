@@ -48,7 +48,7 @@ en:
     index:
       header: 'Your Badges'
       title: "Title"
-      img_url: "Image url"
+      img_url: "Image"
       recieved_at: "Date of recieved"
     all_badges:
       header: 'List of existing Bages'
@@ -113,17 +113,20 @@ en:
       index:
         header: "List of Badges"
         title: "Title"
-        img_url: "Image URL"
+        img_url: "Image"
         rule: "Rule"
+        actions: "Actions"
       show:
         header: "Badge updated"
         title: "Title"
-        img_url: "Image URL"
-        rule: "Rule"        
+        img_url: "Image"
+        rule: "Rule"
       form:
         title: "Title"
-        img_url: "Image URL"
+        img_url: "Image"
         rule: "Rule"
+      create:
+        success: "Badge created successfully"
 
   tests_mailer:
     completed_test:

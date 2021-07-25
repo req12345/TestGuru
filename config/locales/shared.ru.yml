@@ -39,6 +39,7 @@ ru:
 
     flash:
       hello: "Привет, %{user_first_name}!"
+      recieved: "Badge получен!"
 
     prompt:
       select: "Пожалуйста, выберите"

@@ -35,12 +35,12 @@ ru:
     index:
       header: 'Ваши достижения'
       title: "Название"
-      img_url: "Ссылка на изображение"
+      img_url: "Изображение"
       recieved_at: "Дата получения"
     all_badges:
       header: 'Список возможных достижений'
       title: "Название"
-      img_url: "Ссылка на изображение"
+      img_url: "Изображение"
 
   test_passages:
     result:
@@ -117,17 +117,20 @@ ru:
       index:
         header: "Список Badges"
         title: "Название"
-        img_url: "Ссылка на изображение"
+        img_url: "Изображение"
         rule: "Правило"
+        actions: "Действия"
       show:
         header: "Badge отредактирован"
         title: "Название"
-        img_url: "Ссылка на зображение"
-        rule: "Правило" 
+        img_url: "Изображение"
+        rule: "Правило"
       form:
         title: "Название"
-        img_url: "Ссылка на изображение"
+        img_url: "Изображение"
         rule: "Правило"
+      create:
+        success: "Badge успешно создан"
 
   tests_mailer:
     completed_test:

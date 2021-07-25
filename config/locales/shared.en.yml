@@ -39,6 +39,7 @@ en:
 
     flash:
       hello: "Hello, %{user_first_name}!"
+      recieved: "Badge recieved!"
 
     prompt:
       select: "Please select"
