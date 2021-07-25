@@ -7,11 +7,11 @@
     <th class="align-middle"><%= t('.rule') %></th>
   </tr>
 
-<tr>
-  <td class="align-middle"><%= @badge.title %></td>
-  <td class="align-middle"><%= image_tag @badge.image_url %></td>
-  <td class="align-middle"><%= @badge.rule %></td>
-</tr>
+  <tr>
+    <td class="align-middle"><%= @badge.title %></td>
+    <td class="align-middle"><%= image_tag @badge.image_url %></td>
+    <td class="align-middle"><%= @badge.rule %></td>
+  </tr>
 </table>
 
 <%= link_to  t('shared.links.back'), admin_badges_path %>
