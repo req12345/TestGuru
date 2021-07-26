@@ -25,7 +25,6 @@ class BadgeService
   end
 
   def all_tests_by_level(level)
-    byebug
     all_tests_by_level = Test.by_level(level).count
     users_all_tests_by_level = TestPassage.successfull.joins(:test)
                                          .where(user_id: @user.id, tests: { level: level })
