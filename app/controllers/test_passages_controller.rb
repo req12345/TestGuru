@@ -10,6 +10,16 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answers_ids])
 
     if @test_passage.completed?
+      if @test_passage.test_successful
+
+        @test_passage.success_true
+        badge_service = BadgeService.new(@test_passage)
+        badge_service.call
+        if badge_service.recieved == true
+          flash[:notice] = "#{t('.recieved')} #{view_context.link_to(t('.all_badges'), badges_path, target: '_blank').html_safe} "
+        end
+      end
+
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
@@ -22,8 +32,9 @@ class TestPassagesController < ApplicationController
     gist = result.call
 
     if result.success?
-      current_user.gists.create(
-        question: @test_passage.current_question, gist_hash: gist.id, gist_url: gist.html_url)
+      current_user.gists.create(question: @test_passage.current_question,
+                                gist_hash: gist.id,
+                                gist_url: gist.html_url)
 
       flash[:notice] = "#{view_context.link_to('Gist', gist.html_url, target: '_blank').html_safe} #{t('.success')}"
     else

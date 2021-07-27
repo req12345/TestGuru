@@ -31,6 +31,16 @@ ru:
       author: "Бахметов Иван"
       project_description: "это проект системы управления тестами."
 
+  badges:
+    index:
+      header: 'Ваши достижения'
+      title: "Название"
+      img_url: "Изображение"
+    all_badges:
+      header: 'Список возможных достижений'
+      title: "Название"
+      img_url: "Изображение"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
@@ -45,7 +55,10 @@ ru:
     gist:
       success: " успешно сохранён!"
       failure: "Во время сохранения gist произошла ошибка"
-
+    update:
+      all_badges: " Ваши Badges"
+      recieved: "Badge получен!"
+      
   tests:
     index:
       header: "Доступные тесты"
@@ -102,6 +115,28 @@ ru:
         question: "Вопрос"
         gist_url: "Хэш Gist"
         user: "Почта пользователя"
+    badges:
+      index:
+        header: "Список Badges"
+        title: "Название"
+        img_url: "Изображение"
+        rule: "Правило"
+        parameter: "Параметр"
+        actions: "Действия"
+      show:
+        header: "Badge отредактирован"
+        title: "Название"
+        img_url: "Изображение"
+        rule: "Правило"
+        parameter: "Параметр"
+      form:
+        title: "Название"
+        img_url: "Изображение"
+        rule: "Правило"
+        parameter: "Параметр"
+      create:
+        success: "Badge успешно создан"
+
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"

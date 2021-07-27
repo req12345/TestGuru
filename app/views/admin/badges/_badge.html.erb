@@ -1,0 +1,13 @@
+<tr>
+  <td class="align-middle"><%= badge.title %></td>
+  <td class="align-middle"><%= image_tag badge.image_url, size: "90x100" %></td>
+  <td class="align-middle"><%= badge.rule %></td>
+  <td class="align-middle"><%= badge.parameter %></td>
+  <td class="align-middle"><%= link_to t('shared.links.edit'), edit_admin_badge_path(badge) %></td>
+  <td class="align-middle">
+    <%= link_to t('shared.links.delete'),
+                admin_badge_path(badge),
+                method: :delete,
+                data: { confirm: t('shared.delete_confirmation') } %>
+  </td>
+</tr>

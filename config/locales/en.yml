@@ -29,6 +29,14 @@ en:
       author: "Bakhmetov Ivan"
       project_description: "is a porject of test managment system."
 
+  badges:
+    index:
+      header: 'Your Badges'
+      title: "Title"
+      img_url: "Image"
+    all_badges:
+      header: 'List of existing Bages'
+
   test_passages:
     result:
       header: "Test %{title} completed successfuly!"
@@ -43,6 +51,9 @@ en:
     gist:
       success: " was successfully created!"
       failure: "An error occured while saving gist"
+    update:
+      all_badges: "Your Badges"
+      recieved: "Badge recieved!"
 
   tests:
     index:
@@ -100,6 +111,27 @@ en:
           question: "Question"
           gist_url: "Hash Gist"
           user: "User email"
+    badges:
+      index:
+        header: "List of Badges"
+        title: "Title"
+        img_url: "Image"
+        rule: "Rule"
+        parameter: "Parameter"
+        actions: "Actions"
+      show:
+        header: "Badge updated"
+        title: "Title"
+        img_url: "Image"
+        rule: "Rule"
+        parameter: "Parameter"
+      form:
+        title: "Title"
+        img_url: "Image"
+        rule: "Rule"
+        parameter: "Parameter"
+      create:
+        success: "Badge created successfully"
 
   tests_mailer:
     completed_test:

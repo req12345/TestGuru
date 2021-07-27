@@ -1,0 +1,17 @@
+<%= link_to t('shared.links.new_badge'), new_admin_badge_path %>
+
+<h2 class="display-4"><%= t('.header') %></h2>
+
+<table class="table table-hover">
+  <tr class="table-primary">
+    <th class="align-middle"><%= t('.title') %></th>
+    <th class="align-middle"><%= t('.img_url') %></th>
+    <th class="align-middle"><%= t('.rule') %></th>
+    <th class="align-middle"><%= t('.parameter') %></th>
+    <th colspan="2" class="align-middle"><%= t('.actions') %></th>
+  </tr>
+
+  <%= render @badges  %>
+</table>
+
+<%= link_to t('shared.links.back'), admin_tests_path %>

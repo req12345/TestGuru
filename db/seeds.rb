@@ -19,7 +19,7 @@ test = Test.create([
   {title: 'Mammals', level: 3, category: category[1], author_id: user[0].id},
   {title: 'Reptiles', level: 4, category: category[1], author_id: user[0].id},
   {title: 'Comedies', level: 5, category: category[2], author_id: user[0].id},
-  {title: 'Thriller', level: 6, category: category[2], author_id: user[0].id}])
+  {title: 'Thrillers', level: 6, category: category[2], author_id: user[0].id}])
 
 question = Question.create([
   {body: 'Guitar question № 1', test: test[0]},
@@ -96,3 +96,52 @@ answer = Answer.create([
   {body: 'Thriller Answer № 1 for question № 3', question: question[17]},
   {body: 'Thriller Answer № 2 for question № 3', question: question[17]},
   {body: 'Thriller Answer № 3 for question № 3', question: question[17], correct: true}])
+
+Badge.create([
+  {title: 'Выполнены все тесты категории',
+   image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHmq7PDvbiKIfOsHUf8ObA1i99hnCTVgBCXw&usqp=CAU',
+   rule: 'all_in_category', parameter: category[0].title},
+  {title: 'Выполнены все тесты категории',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHmq7PDvbiKIfOsHUf8ObA1i99hnCTVgBCXw&usqp=CAU',
+    rule: 'all_in_category', parameter: category[1].title},
+  {title: 'Выполнены все тесты категории',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHmq7PDvbiKIfOsHUf8ObA1i99hnCTVgBCXw&usqp=CAU',
+    rule: 'all_in_category', parameter: category[2].title},
+
+  {title: 'С первого раза выполнен тест',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[0].title},
+  {title: 'С первого раза выполнен тест',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[1].title},
+  {title: 'С первого раза выполнен тест',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[2].title},
+  {title: 'С первого раза выполнен тест',
+  image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[3].title},
+  {title: 'С первого раза выполнен тест',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[4].title},
+  {title: 'С первого раза выполнен тест',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm752f-xtzCUDL-oGrpOA6U_44SX2MT4RPA&usqp=CAU',
+    rule: 'on_first_try', parameter: test[5].title},
+
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 1},
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 2},
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 3},
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 4},
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 5},
+  {title: 'Выполнил все тесты уровня',
+    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLy7GHeHc16ZEOoMXF_0iC6AdR6bfLgXX-Q&usqp=CAU',
+    rule: 'all_tests_by_level', parameter: 6}])
