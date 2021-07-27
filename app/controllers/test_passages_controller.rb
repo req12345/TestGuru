@@ -15,7 +15,9 @@ class TestPassagesController < ApplicationController
         @test_passage.success_true
         badge_service = BadgeService.new(@test_passage)
         badge_service.call
-        flash[:notice] = t('shared.flash.recieved') if badge_service.recieved == true
+        if badge_service.recieved == true
+          flash[:notice] = "#{t('.recieved')} #{view_context.link_to(t('.all_badges'), badges_path, target: '_blank').html_safe} "
+        end
       end
 
       TestsMailer.completed_test(@test_passage).deliver_now
