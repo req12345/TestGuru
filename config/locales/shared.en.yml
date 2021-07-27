@@ -39,7 +39,6 @@ en:
 
     flash:
       hello: "Hello, %{user_first_name}!"
-      recieved: " recieved!"
 
     prompt:
       select: "Please select"

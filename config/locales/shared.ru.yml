@@ -39,7 +39,6 @@ ru:
 
     flash:
       hello: "Привет, %{user_first_name}!"
-      recieved: " получен!"
 
     prompt:
       select: "Пожалуйста, выберите"
