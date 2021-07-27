@@ -58,6 +58,7 @@ ru:
     update:
       all_badges: " Ваши Badges"
       recieved: "Badge получен!"
+      
   tests:
     index:
       header: "Доступные тесты"
