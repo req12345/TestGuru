@@ -36,7 +36,6 @@ ru:
       header: 'Ваши достижения'
       title: "Название"
       img_url: "Изображение"
-      recieved_at: "Дата получения"
     all_badges:
       header: 'Список возможных достижений'
       title: "Название"
@@ -56,7 +55,9 @@ ru:
     gist:
       success: " успешно сохранён!"
       failure: "Во время сохранения gist произошла ошибка"
-
+    update:
+      all_badges: " Ваши Badges"
+      recieved: "Badge получен!"
   tests:
     index:
       header: "Доступные тесты"
@@ -131,7 +132,7 @@ ru:
         title: "Название"
         img_url: "Изображение"
         rule: "Правило"
-        parameter: "Параметр" 
+        parameter: "Параметр"
       create:
         success: "Badge успешно создан"
 
