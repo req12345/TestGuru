@@ -64,7 +64,7 @@ en:
       questions: "Questions"
       author: "Author"
       actions: "Actions"
-
+      passing_time: "Duration"
   fedbacks:
     form:
       feedback: "Feedback"
@@ -87,11 +87,17 @@ en:
         questions: "Questions"
         author: "Author"
         actions: "Actions"
+        passing_time: "Duration"
       show:
         header: "Test: %{title} | Category: %{category}"
         header2: "Questions"
         question_body: "Questions content"
         actions: "Actions"
+      form:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        passing_time: "Duration"
       form_inline:
         submit: "OK"
     questions:

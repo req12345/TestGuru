@@ -42,3 +42,11 @@ ru:
 
     prompt:
       select: "Пожалуйста, выберите"
+
+    header:
+      test_create: "Создать новый тест"
+      test_edit: "Редактировать тест"
+      question_create: "Создать новый вопрос"
+      question_edit: "Редактировать вопрос"
+      answer_create: "Создать новый ответ"
+      answer_edit: "Редактировать ответ"

@@ -11,10 +11,12 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        passing_time: "Длительность"
       question:
         body: "Содержание"
       answer:
         body: "Содержание"
+        correct: "Правильный?"
       user:
         first_name: "Имя"
         last_name: "Фамилия"

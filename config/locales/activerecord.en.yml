@@ -10,10 +10,12 @@ en:
       test:
         title: "Title"
         level: "Level"
-        category: "Категория"
+        category: "Category"
+        passing_time: "Duration"
       question:
         body: "Content"
       answer:
+        correct: "Correct?"
         body: "Content"
       user:
         first_name: "First_name"
