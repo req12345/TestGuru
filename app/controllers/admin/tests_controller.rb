@@ -52,7 +52,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def find_test
-    @test = Test.find(params[:id])
+    @test = Test.find_by(id: params[:id])
   end
 
   def test_params
