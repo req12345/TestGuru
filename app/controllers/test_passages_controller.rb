@@ -7,24 +7,45 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
-    @test_passage.accept!(params[:answers_ids])
-    passed_time = @test_passage.passed_time(@test_passage)
-    if @test_passage.completed? || passed_time <= 0
-      if @test_passage.test_successful
-        @test_passage.success_true
-        badge_service = BadgeService.new(@test_passage)
-        badge_service.call
-        if badge_service.recieved == true
-          flash[:notice] = "#{t('.recieved')} #{view_context.link_to(t('.all_badges'), badges_path, target: '_blank').html_safe}"
+    case @test_passage.test.passing_time
+    when true
+      @test_passage.accept!(params[:answers_ids])
+      passed_time = @test_passage.passed_time(@test_passage)
+      if @test_passage.completed? || passed_time <= 0
+        if @test_passage.test_successful
+          @test_passage.success_true
+          badge_service = BadgeService.new(@test_passage)
+          badge_service.call
+          if badge_service.recieved == true
+            flash[:notice] = "#{t('.recieved')} #{view_context.link_to(t('.all_badges'), badges_path, target: '_blank').html_safe}"
+          end
         end
+        send_mail_and_redirect(@test_passage)
+      else
+        render :show
       end
-      TestsMailer.completed_test(@test_passage).deliver_now
-      redirect_to result_test_passage_path(@test_passage)
     else
-      render :show
+      @test_passage.accept!(params[:answers_ids])
+      if @test_passage.completed?
+        if @test_passage.test_successful
+          @test_passage.success_true
+          badge_service = BadgeService.new(@test_passage)
+          badge_service.call
+          if badge_service.recieved == true
+            flash[:notice] = "#{t('.recieved')} #{view_context.link_to(t('.all_badges'), badges_path, target: '_blank').html_safe}"
+          end
+        end
+        send_mail_and_redirect(@test_passage)
+      else
+        render :show
+      end
     end
   end
 
+  def send_mail_and_redirect(test_passage)
+    TestsMailer.completed_test(test_passage).deliver_now
+    redirect_to result_test_passage_path(test_passage)
+  end
 
   def gist
     result = GistQuestionService.new(@test_passage.current_question)
