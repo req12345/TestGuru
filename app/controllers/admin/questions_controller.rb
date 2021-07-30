@@ -47,7 +47,7 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def find_question
-    @question = Question.find_by(id: params[:id])
+    @question = Question.find(params[:id])
   end
 
   def question_params
