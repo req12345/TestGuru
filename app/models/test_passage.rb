@@ -43,8 +43,9 @@ class TestPassage < ApplicationRecord
   end
 
 
-  def expired(test_passage)
-      ((test_passage.created_at + test_passage.test.passing_time * 60) - Time.now) <= 0
+  def time_is_out?
+    return if self.test.passing_time == nil
+      ((self.created_at + self.test.passing_time * 60) - Time.now) <= 0
   end
 
   private

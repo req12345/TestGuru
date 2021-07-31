@@ -43,7 +43,7 @@ class Admin::QuestionsController < ApplicationController
   private
 
   def find_test
-    @test = Test.find_by(id: params[:test_id])
+    @test = Test.find(params[:test_id])
   end
 
   def find_question
