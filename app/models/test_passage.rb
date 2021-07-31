@@ -42,9 +42,9 @@ class TestPassage < ApplicationRecord
     true if player_passage_percentes < CONDITION_OF_PASSAGE
   end
 
-  def passed_time(test_passage)
-    return if test_passage.test.passing_time == nil
-    (test_passage.created_at + test_passage.test.passing_time * 60) - Time.now
+
+  def expired(test_passage)
+      ((test_passage.created_at + test_passage.test.passing_time * 60) - Time.now) <= 0
   end
 
   private
