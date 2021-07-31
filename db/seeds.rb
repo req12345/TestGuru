@@ -14,8 +14,8 @@ category = Category.create([
   {title: 'Films'}])
 
 test = Test.create([
-  {title: 'Guitar', level: 1, category: category[0], author_id: user[0].id},
-  {title: 'Piano', level: 2, category: category[0], author_id: user[0].id},
+  {title: 'Guitar', level: 1, category: category[0], author_id: user[0].id, passing_time: 1},
+  {title: 'Piano', level: 2, category: category[0], author_id: user[0].id, passing_time: 1},
   {title: 'Mammals', level: 3, category: category[1], author_id: user[0].id},
   {title: 'Reptiles', level: 4, category: category[1], author_id: user[0].id},
   {title: 'Comedies', level: 5, category: category[2], author_id: user[0].id},

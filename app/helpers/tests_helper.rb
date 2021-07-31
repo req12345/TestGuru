@@ -13,9 +13,9 @@ module TestsHelper
 
   def test_header(test)
     if test.new_record?
-      "Create new test"
+      t('shared.header.test_create')
     else
-      "Edit test"
+      t('shared.header.test_edit')
     end
   end
 end

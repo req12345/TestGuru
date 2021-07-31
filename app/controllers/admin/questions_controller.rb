@@ -1,5 +1,5 @@
 class Admin::QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create index new destroy]
+  before_action :find_test, only: %i[create index new destroy show]
   before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -43,7 +43,7 @@ class Admin::QuestionsController < ApplicationController
   private
 
   def find_test
-    @test = Test.find_by(id: params[:test_id])
+    @test = Test.find(params[:test_id])
   end
 
   def find_question

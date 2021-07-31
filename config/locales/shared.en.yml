@@ -42,3 +42,11 @@ en:
 
     prompt:
       select: "Please select"
+
+    header:
+      test_create: "Create new test"
+      test_edit: "Edit tes"
+      test_create: "Create new question"
+      test_edit: "Edit question"
+      test_create: "Create new answer"
+      test_edit: "Edit answer"

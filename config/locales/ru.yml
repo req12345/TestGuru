@@ -58,7 +58,7 @@ ru:
     update:
       all_badges: " Ваши Badges"
       recieved: "Badge получен!"
-      
+
   tests:
     index:
       header: "Доступные тесты"
@@ -91,11 +91,17 @@ ru:
         questions: "Вопросов"
         author: "Автор"
         actions: "Действия"
+        passing_time: "Длительность"
       show:
         header: "Тест: %{title} | Категория: %{category}"
         header2: "Вопросы"
         question_body: "Содержание вопросов"
         actions: "Действия"
+      form:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        passing_time: "Длительность"
       form_inline:
         submit: "OK"
     questions:

@@ -7,6 +7,11 @@
   <td class="align-middle"><%= test.category.title %></td>
   <td class="align-middle"><%= test.questions.size %></td>
   <td class="align-middle"><%= test.author.first_name %></td>
+  <% if test.passing_time?%>
+    <td class="align-middle"><%= test.passing_time.to_s + " min" %></td>
+  <% else %>
+    <td class="align-middle">-</td>
+  <% end %>
   <td class="align-middle"><%= link_to t('shared.links.show'), admin_test_path(test) %></td>
   <td class="align-middle">
     <%= link_to t('shared.links.edit'),

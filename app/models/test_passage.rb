@@ -42,6 +42,12 @@ class TestPassage < ApplicationRecord
     true if player_passage_percentes < CONDITION_OF_PASSAGE
   end
 
+
+  def time_is_out?
+    return if self.test.passing_time == nil
+      ((self.created_at + self.test.passing_time * 60) - Time.now) <= 0
+  end
+
   private
 
   def before_validation_set_current_question

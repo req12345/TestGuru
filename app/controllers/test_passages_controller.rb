@@ -9,9 +9,8 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answers_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.time_is_out?
       if @test_passage.test_successful
-
         @test_passage.success_true
         badge_service = BadgeService.new(@test_passage)
         badge_service.call
